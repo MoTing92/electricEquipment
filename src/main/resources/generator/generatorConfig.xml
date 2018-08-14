@@ -17,9 +17,9 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.127.50:3306/mvne_channel_manage?serverTimezone=UTC&amp;characterEncoding=utf-8"
-                        userId="mvnedba"
-                        password="kfcs@1009">
+                        connectionURL="jdbc:mysql://localhost:3306/electric_equipment?serverTimezone=UTC&amp;characterEncoding=utf-8"
+                        userId="root"
+                        password="mt19930902">
         </jdbcConnection> 
         
  <!--        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
@@ -28,20 +28,27 @@
                         password="root-123">
         </jdbcConnection> -->
 
-        <javaModelGenerator targetPackage="com.cmsz.mvne.portal.channel.model" targetProject="src\main\java">
+        <javaModelGenerator targetPackage="com.xuekun.electricEquipment.pojo" targetProject="src\main\java">
             <property name="trimStrings" value="false" />
             <!-- <property name="rootClass" value="tk.mybatis.simple.model.BaseEntity" /> -->
         </javaModelGenerator>
-		<!-- 
-        <sqlMapGenerator targetPackage="com.cmsz.mvne.portal.channel.mapper"  targetProject="src\main\resources"/>
+		
+        <sqlMapGenerator targetPackage="com.xuekun.electricEquipment.mapper"  targetProject="src\main\resources"/>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.cmsz.mvne.portal.channel.mapper"  targetProject="src\main\java"/>
-		 -->
-        <table tableName="channel_management_employee">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.xuekun.electricEquipment.mapper"  targetProject="src\main\java"/>
+		 
+        <table tableName="user">
         </table> 
-        <!-- <table tableName="ORD_SUBS_USER">
-            <generatedKey column="SUBS_USER_ID" sqlStatement="MySql"/>
-        </table>  -->
+        <table tableName="role">
+        </table> 
+        <table tableName="menu">
+        </table> 
+        <table tableName="product">
+        </table> 
+        <table tableName="news">
+        </table> 
+        <table tableName="company">
+        </table> 
         
     </context>
 </generatorConfiguration>
